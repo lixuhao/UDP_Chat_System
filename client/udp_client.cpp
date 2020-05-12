@@ -2,9 +2,9 @@
 
 udp_client::udp_client(std::string server_ip,int server_port)
 {
-	server.sin_family = AF_INET;
-	server.sin_port = htons(server_port);
-	server.sin_addr.s_addr = inet_addr(server_ip.c_str());
+	server.sin_family = AF_INET;//协议
+	server.sin_port = htons(server_port);//将server_port
+	server.sin_addr.s_addr = inet_addr(server_ip.c_str());//将
 }
 
 void udp_client::init_client()
